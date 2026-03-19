@@ -18,7 +18,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 z-40 flex gap-6 p-6 text-white">
+    <nav className="fixed top-0 left-0 z-40 flex gap-6 p-6">
       <button onClick={() => handleNav("/")}>Home</button>
       <button onClick={() => handleNav("/artwork")}>Artwork</button>
       <button onClick={() => handleNav("/contact")}>Contact</button>
