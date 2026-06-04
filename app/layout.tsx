@@ -4,6 +4,8 @@ import "./globals.css";
 import Loader from "@/components/Loader";
 import Nav from "@/components/nav";
 import TransitionProvider from "@/components/TransitionProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +30,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-50 text-neutral-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TransitionProvider>
-          <Loader />
-          <Nav />
-          {children}
-        </TransitionProvider>
+        <ThemeProvider>
+          <TransitionProvider>
+            <Loader />
+            <ThemeToggle />
+            <Nav />
+            {children}
+          </TransitionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

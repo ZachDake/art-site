@@ -5,8 +5,7 @@ import { useTransition } from "./TransitionProvider";
 import gsap from "gsap";
 
 export default function Loader() {
-  // const { loading } = useTransition();
-  const loading = true;
+  const { loading } = useTransition();
 
   const panelRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
