@@ -20,7 +20,7 @@ export default function Home() {
       {/* HERO */}
       <div className="relative h-screen w-full">
         <Image
-          src="/images/hero.png"
+          src="/images/hero-post-edit.png"
           alt="Hero artwork"
           fill
           priority
@@ -68,6 +68,34 @@ export default function Home() {
           `}
         />
       </section>
+      {/* HERO */}
+      <div className="relative h-screen w-full">
+        <Image
+          src="/images/hero-post-edit.png"
+          alt="Hero artwork"
+          fill
+          priority
+          className="object-cover"
+        />
+
+                {/* Optional overlay that changes with theme */}
+        <div
+          className={`
+            absolute inset-0 transition-colors duration-700
+            ${
+              theme === "day"
+                ? "bg-transparent"
+                : "bg-slate-950/30"
+            }
+          `}
+        />
+
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-white text-6xl font-bold">
+            Hero Area
+          </h1>
+        </div>
+      </div>
     </main>
   );
 }

@@ -24,3 +24,136 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* GALLERY */
+
+.gallery-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.gallery-header {
+  margin-bottom: 3rem;
+}
+
+.gallery-header h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(280px, 1fr));
+
+  gap: 24px;
+}
+
+/* END GALLERY */
+
+/* GALLERY CARD */
+
+.artwork-card {
+  text-decoration: none;
+}
+
+.artwork-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.artwork-card:hover .artwork-image {
+  transform: scale(1.03);
+}
+
+/* END GALLERY CARD */
+
+/* OVERLAY */
+
+.artwork-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 1.5rem;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75),
+      transparent 50%
+    );
+}
+
+.artwork-card:hover .artwork-overlay {
+  opacity: 1;
+}
+
+.artwork-overlay h3 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* END OVERLAY */
+
+/* SINGLE ARTWORK PAGE */
+
+.artwork-page {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+}
+
+.artwork-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.artwork-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.artwork-detail-image {
+  width: auto;
+  height: auto;
+
+  max-height: 85vh;
+  max-width: 100%;
+
+  border-radius: 12px;
+}
+
+.artwork-meta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.artwork-meta h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.artwork-meta p {
+  opacity: 0.8;
+}
+
+/* END SINGLE ARTWORK */
